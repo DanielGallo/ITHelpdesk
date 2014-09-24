@@ -1,0 +1,55 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Tickets",
+        "groupField": null,
+        "model": "Ticket",
+        "storeId": "Tickets"
+    },
+    "designerId": "e8aade9b-52f1-4771-b047-41891cecae6c",
+    "cn": [
+        {
+            "type": "Ext.util.Grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "direction": "DESC"
+            },
+            "name": "MyGrouper",
+            "designerId": "569c424e-f7d4-4cf9-a5cd-015db7d8d1d1",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "item"
+                        ],
+                        "fn": "groupFn",
+                        "implHandler": [
+                            "if (item.get('Closed') === true) {",
+                            "    return 'Closed';",
+                            "} else {",
+                            "    return 'Open';",
+                            "}"
+                        ]
+                    },
+                    "name": "groupFn",
+                    "designerId": "0d4bad9a-b9f2-4434-9044-7f1b1b166731"
+                }
+            ]
+        }
+    ]
+}

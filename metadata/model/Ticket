@@ -1,0 +1,141 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Ticket",
+        "idProperty": "ID"
+    },
+    "designerId": "1c0c57ca-289c-45d2-9dc1-ac5205490987",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Title"
+            },
+            "name": "field1",
+            "designerId": "5a203055-2653-4e05-bc01-2acbf7f50892"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Description"
+            },
+            "name": "field2",
+            "designerId": "8d61d969-c3cf-4660-9e2a-fe1423246211"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": "c",
+                "name": "DateCreated",
+                "type": "date"
+            },
+            "name": "field3",
+            "designerId": "f1bdd370-a78d-4404-8526-60d39b1fadbe"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "UserID",
+                "type": "int"
+            },
+            "name": "field4",
+            "designerId": "8f40d1b7-5110-46e1-aff7-97342fd2ccec"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Notes"
+            },
+            "name": "field5",
+            "designerId": "b6cf3185-7edf-4e0b-9aae-eedf33d1ece5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "defaultValue": null,
+                "name": "Closed",
+                "type": "boolean"
+            },
+            "name": "field6",
+            "designerId": "6ebd3ffe-e81c-4e81-a10a-bb2fc03f607a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": "c",
+                "name": "DateClosed",
+                "type": "date"
+            },
+            "name": "field7",
+            "designerId": "efa1094e-8453-4c6e-8edf-b371b5e0dc1a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "AssetTag"
+            },
+            "name": "field8",
+            "designerId": "2cb387e8-1870-43b1-9825-3e7e1e33e9e1"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "api/ticket",
+                "useDefaultXhrHeader": null,
+                "withCredentials": true
+            },
+            "name": "MyRestProxy",
+            "designerId": "d015f718-38d4-423d-ac35-250d7b9894ba"
+        }
+    ]
+}

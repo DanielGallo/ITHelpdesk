@@ -1,0 +1,13 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "companyform",
+        "designer|userClassName": "CompanyForm"
+    },
+    "designerId": "7bdad51f-350b-4495-bbc9-16946c3f3d31"
+}

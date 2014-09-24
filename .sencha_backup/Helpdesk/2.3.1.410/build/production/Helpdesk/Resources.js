@@ -1,0 +1,1 @@
+function _db771d21bcad433e800ed906dff2c71270924f6d(){};Ext.define("Helpdesk",{singleton:true,config:{userId:null,baseUrl:"http://192.168.0.18/ITHelpdesk"},constructor:function(a){this.initConfig(a);return this}});

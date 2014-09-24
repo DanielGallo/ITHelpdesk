@@ -1,0 +1,17 @@
+{
+    "type": "jsoverrideresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js1",
+        "includeInBundle": true,
+        "url": "app/override/field/Checkbox.js",
+        "x-compile": true
+    },
+    "name": "js1",
+    "designerId": "8970a674-b253-4e67-91d1-2ac43be76d80"
+}

@@ -1,0 +1,240 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Ticket"
+    },
+    "designerId": "4df469a2-e565-4976-990a-24a37f864708",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "ticketlist",
+                "designer|targetType": "TicketList",
+                "fn": "onListItemTap",
+                "implHandler": [
+                    "var mainView = this.getMainView(),",
+                    "    disabled = record.get('Closed');",
+                    "",
+                    "mainView.push(Ext.create('Helpdesk.view.TicketForm', {",
+                    "    title: record.get('Title'),",
+                    "    record: record,",
+                    "    disabled: disabled",
+                    "}));"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onListItemTap",
+            "designerId": "950d4293-a71f-410f-917f-dfe319daed6d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button[action=ScanBarcode]",
+                "designer|targetType": "Ext.Button",
+                "fn": "onScanBarcodeTap",
+                "implHandler": [
+                    "var assetTagField = button.up('fieldset').down('textfield');",
+                    "",
+                    "cordova.plugins.barcodeScanner.scan(",
+                    "    function (result) {",
+                    "        if (result.cancelled === 0) {",
+                    "            assetTagField.setValue(result.text);",
+                    "        }",
+                    "    },",
+                    "    function (error) {",
+                    "        Ext.device.Notification.show({",
+                    "            title: 'Error',",
+                    "            message: 'An error occurred trying to scan the barcode. Please try again.',",
+                    "            buttons: Ext.MessageBox.OK,",
+                    "            callback: function(button) {",
+                    "            }",
+                    "        });",
+                    "    }",
+                    ");"
+                ],
+                "name": "tap"
+            },
+            "name": "onScanBarcodeTap",
+            "designerId": "2f8b58c5-ea8f-4068-8852-6e8519bd5e9e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button[action=SaveTicket]",
+                "designer|targetType": "Ext.Button",
+                "fn": "onSaveTicketTap",
+                "implHandler": [
+                    "var form = button.up('formpanel');",
+                    "",
+                    "this.saveRecord(form, 'Tickets');"
+                ],
+                "name": "tap"
+            },
+            "name": "onSaveTicketTap",
+            "designerId": "083f13a4-7fa3-457f-b02a-d701a34ef47a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "formpanel",
+                "designer|targetType": "TicketForm",
+                "fn": "onTicketFormInitialize",
+                "implHandler": [
+                    "if (component.isDisabled()) {",
+                    "    var buttons = component.query('button');",
+                    "",
+                    "    for (var i = 0; i < buttons.length; i ++) {",
+                    "        buttons[i].hide();",
+                    "    }",
+                    "}"
+                ],
+                "name": "initialize"
+            },
+            "name": "onTicketFormInitialize",
+            "designerId": "5bb6ec95-961c-4b5d-bd36-d4aaca346336"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "form",
+                    "storeId"
+                ],
+                "fn": "saveRecord",
+                "implHandler": [
+                    "var me = this,",
+                    "    values = form.getValues(),",
+                    "    record = form.getRecord(),",
+                    "    newRecord = record.phantom,",
+                    "    store = Ext.getStore(storeId);",
+                    "",
+                    "if (newRecord) {",
+                    "    record.set('ID', 0);",
+                    "}",
+                    "",
+                    "record.beginEdit();",
+                    "",
+                    "record.set(values);",
+                    "",
+                    "if (record.isValid()) {",
+                    "    Ext.Viewport.setMasked({",
+                    "        xtype: 'loadmask',",
+                    "        message: 'Saving...'",
+                    "    });",
+                    "",
+                    "    record.save({",
+                    "        callback: function() {",
+                    "            Ext.Viewport.setMasked(false);",
+                    "        },",
+                    "        success: function() {",
+                    "            record.endEdit();",
+                    "",
+                    "            if (newRecord) {",
+                    "                store.add(record);",
+                    "            }",
+                    "",
+                    "            me.getMainView().pop();",
+                    "        },",
+                    "        failure: function() {",
+                    "            record.cancelEdit();",
+                    "",
+                    "            Ext.Msg.alert(\"Error\", \"Unable to commit these changes.\");",
+                    "        }",
+                    "    });",
+                    "}",
+                    "else {",
+                    "    var errors = record.validate(),",
+                    "        message = \"Please resolve the following errors with the record:<br><br>\";",
+                    "",
+                    "    record.cancelEdit();",
+                    "",
+                    "    for (var i = 0; i < errors.items.length; i ++) {",
+                    "        message += \"<li>\" + errors.items[i].getField() + \" \" + errors.items[i].getMessage();",
+                    "    }",
+                    "",
+                    "    Ext.Msg.alert(\"Error\", message);",
+                    "}"
+                ]
+            },
+            "name": "saveRecord",
+            "designerId": "5f96bbc4-ece6-441b-a85c-d006ce06597e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "form"
+                ],
+                "fn": "deleteRecord",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "deleteRecord",
+            "designerId": "739da621-8cfd-4068-b709-6546b1196284"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainView",
+                "selector": "mainview"
+            },
+            "name": "mainView",
+            "designerId": "57dc0bc9-3170-463a-8781-bec91551055c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "ticketForm",
+                "selector": "ticketform"
+            },
+            "name": "ticketForm",
+            "designerId": "13e3838b-c40f-4115-83ee-5ad45e0a6d4a"
+        }
+    ]
+}

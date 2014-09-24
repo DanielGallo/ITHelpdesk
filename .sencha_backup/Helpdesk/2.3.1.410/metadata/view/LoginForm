@@ -1,0 +1,105 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "loginform",
+        "designer|userClassName": "LoginForm"
+    },
+    "designerId": "73946b36-47e1-4a22-93f7-278634535e0e",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "defaults": [
+                    "{labelWidth: 110}"
+                ],
+                "title": "Login"
+            },
+            "name": "MyFieldSet",
+            "designerId": "d492fae6-b884-4e01-a296-d157aeab475c",
+            "cn": [
+                {
+                    "type": "Ext.field.Email",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Email",
+                        "name": "EmailAddress",
+                        "placeHolder": "email@example.com",
+                        "required": null
+                    },
+                    "name": "MyEmailField",
+                    "designerId": "8e19bdd7-148c-4866-8c81-04a99d4b056b"
+                },
+                {
+                    "type": "Ext.field.Password",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Password",
+                        "name": "Password",
+                        "required": null
+                    },
+                    "name": "MyPasswordField",
+                    "designerId": "4e05088d-3d72-4291-ab67-d6dfa3a34427"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "hbox"
+            },
+            "name": "MyContainer1",
+            "designerId": "f460970c-3e7f-4eaf-9316-d37c45515c93",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "Login",
+                        "centered": true,
+                        "iconCls": "fa-sign-in",
+                        "layout|flex": null,
+                        "margin": 20,
+                        "text": "Login",
+                        "width": 120
+                    },
+                    "name": "MyButton",
+                    "designerId": "4dffd5cb-23ea-4303-bf09-531c16ddc799",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

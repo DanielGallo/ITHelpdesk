@@ -1,0 +1,17 @@
+{
+    "type": "jsoverrideresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js",
+        "includeInBundle": true,
+        "url": "app/override/data/proxy/Rest.js",
+        "x-compile": true
+    },
+    "name": "js",
+    "designerId": "64b4a38c-c83c-4354-baa3-6e3e0e0bf4d8"
+}

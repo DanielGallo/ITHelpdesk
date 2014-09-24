@@ -1,0 +1,65 @@
+{
+   "name": "Helpdesk",
+   "indexHtmlPath": "index.html",
+   "url": null,
+   "js": [
+      {
+         "path": "touch/sencha-touch.js",
+         "x-bootstrap": true
+      },
+      {
+         "path": "bootstrap.js",
+         "x-bootstrap": true
+      },
+      {
+         "path": "app/override/data/proxy/Rest.js",
+         "x-compile": true,
+         "includeInBundle": true
+      },
+      {
+         "path": "app/override/field/Checkbox.js",
+         "x-compile": true,
+         "includeInBundle": true
+      },
+      {
+         "path": "app.js",
+         "bundle": true,
+         "update": "delta"
+      }
+   ],
+   "css": [
+      {
+         "update": "delta",
+         "platform": [
+            "phone",
+            "tablet",
+            "desktop"
+         ],
+         "theme": "Cupertino",
+         "path": "resources/css/cupertino-7dfa6554-2fe6-48c9-839e-e977631b8d1e.css"
+      }
+   ],
+   "appCache": {
+      "cache": [
+         "index.html"
+      ],
+      "network": [
+         "*"
+      ],
+      "fallback": []
+   },
+   "resources": [
+      "resources/images",
+      "resources/icons",
+      "resources/startup"
+   ],
+   "ignore": [
+      ".svn$"
+   ],
+   "archivePath": "archive",
+   "requires": [
+      "sencha-charts"
+   ],
+   "id": "1769c3a0-e082-4cba-9061-f619f0f36918",
+   "classpath": "${app.dir}/app,${app.dir}/app/override/data/proxy/,${app.dir}/app/override/field/"
+}

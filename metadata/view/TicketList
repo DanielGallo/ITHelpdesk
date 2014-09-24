@@ -1,0 +1,91 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "ticketlist",
+        "designer|userClassName": "TicketList",
+        "disableSelection": true,
+        "grouped": true,
+        "onItemDisclosure": null,
+        "store": "Tickets"
+    },
+    "designerId": "5230ae0f-1b45-423a-ab4d-7796afb4d6a7",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div>{Title}</div>",
+                    "<div class=\"listDates\">",
+                    "    <div>Created on {DateCreated:date('d/m/Y')}</div>",
+                    "    <tpl if=\"Closed == true\">",
+                    "        <div>Closed on {DateClosed:date('d/m/Y')}</div>",
+                    "    </tpl>",
+                    "</div>"
+                ]
+            },
+            "name": "tpl",
+            "designerId": "c23ab6d2-c3db-4ed0-b6a9-e8529e2a0261"
+        },
+        {
+            "type": "Ext.plugin.PullRefresh",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyPullRefreshPlugin",
+            "designerId": "ada9869c-a9cb-4d68-84ff-83818265e0ff"
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom"
+            },
+            "name": "MyToolbar2",
+            "designerId": "8ed0a541-6c99-4371-8c89-8465a59693b2",
+            "cn": [
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MySpacer1",
+                    "designerId": "32e52974-baa7-4f8b-b49d-cf887e8c4f7f"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconAlign": null,
+                        "iconCls": "fa-plus",
+                        "text": "New Ticket"
+                    },
+                    "name": "MyButton4",
+                    "designerId": "c255688e-ca34-492b-9c54-5becca08f061"
+                }
+            ]
+        }
+    ]
+}

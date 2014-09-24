@@ -1,0 +1,43 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "User",
+        "idProperty": "ID"
+    },
+    "name": "MyModel",
+    "designerId": "64acb335-5472-405c-a35c-b869321e7313",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Name"
+            },
+            "name": "field",
+            "designerId": "4283d476-775e-4e1f-b30d-fb2d5918be20"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "api/user",
+                "withCredentials": true
+            },
+            "name": "MyRestProxy2",
+            "designerId": "b3ac56ef-c492-47da-a19c-1a850f9a3cde"
+        }
+    ]
+}

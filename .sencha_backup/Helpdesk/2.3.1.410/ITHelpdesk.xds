@@ -1,0 +1,75 @@
+{
+    "name": "ITHelpdesk",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "5.0.1.231",
+            "frameworkVersion": "2.3.1.410"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "http://localhost/ITHelpdesk/",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": true,
+        "displayfield-ExtBox1-1770-inputEl": "Not Installed",
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "installStatus": "Not Installed",
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app"
+        }
+    },
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1903,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000007,
+    "framework": "touch23",
+    "viewOrderMap": {
+        "view": [
+            "5c1335f1-6dd8-4bc8-b1cb-cc0149cd3693",
+            "d268cb6a-1f7f-40bd-94cf-0ddfefa13d31",
+            "73946b36-47e1-4a22-93f7-278634535e0e",
+            "7bdad51f-350b-4495-bbc9-16946c3f3d31",
+            "5230ae0f-1b45-423a-ab4d-7796afb4d6a7",
+            "734a4b92-9ecc-4e6a-811a-405e04a467cf"
+        ],
+        "store": [
+            "e8aade9b-52f1-4771-b047-41891cecae6c",
+            "70168cfd-2f4a-4354-9048-d41da90c1495"
+        ],
+        "controller": [
+            "21bd4d7a-7622-4d44-8ea7-14781663bed1",
+            "4df469a2-e565-4976-990a-24a37f864708",
+            "8cb80e35-a93c-42eb-9d8d-e65b5b02b7b0"
+        ],
+        "model": [
+            "1c0c57ca-289c-45d2-9dc1-ac5205490987",
+            "e05b78ce-95b2-4178-a417-f2e0824380a1",
+            "64acb335-5472-405c-a35c-b869321e7313",
+            "d024c3c8-5658-4290-9244-2faca4709211"
+        ],
+        "resource": [
+            "e699f454-f54a-4e22-8b23-a1d2b918b4c0",
+            "7dfa6554-2fe6-48c9-839e-e977631b8d1e",
+            "64b4a38c-c83c-4354-baa3-6e3e0e0bf4d8",
+            "8970a674-b253-4e67-91d1-2ac43be76d80"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

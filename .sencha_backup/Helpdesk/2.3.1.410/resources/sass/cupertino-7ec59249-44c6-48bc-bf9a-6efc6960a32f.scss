@@ -1,0 +1,15 @@
+
+
+@import 'sencha-touch/cupertino';
+@import 'sencha-touch/cupertino/all';
+
+
+/*@include icon-font('fontawesome',
+    inline-font-files('fontawesome/fontawesome-webfont.woff', woff,
+                    'fontawesome/fontawesome-webfont.ttf', truetype,
+                    'fontawesome/fontawesome-webfont.svg', svg));
+
+@include icon('save', 'fa-floppy-o', 'fontawesome');
+@include icon('fa-barcode', 'fa-barcode', 'fontawesome');*/
+
+@import 'fontawesome/scss/font-awesome.scss';

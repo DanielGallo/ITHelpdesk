@@ -1,0 +1,8 @@
+{
+    "publishPath": "",
+    "webBuild": {
+        "environment": "testing",
+        "clean": "on",
+        "publishPath": "/Library/WebServer/Documents/ArchitectApps/ITHelpdesk-Build/"
+    }
+}

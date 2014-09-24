@@ -1,0 +1,55 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Device",
+        "idProperty": "ID"
+    },
+    "designerId": "e05b78ce-95b2-4178-a417-f2e0824380a1",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Name"
+            },
+            "name": "field9",
+            "designerId": "4c27712d-f001-434c-ab16-0c584ae3cf36"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Token"
+            },
+            "name": "field10",
+            "designerId": "9fcdfaa9-a9ce-4764-aeb7-8cfe84debfc6"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "api/device",
+                "withCredentials": true
+            },
+            "name": "MyRestProxy1",
+            "designerId": "99d8c970-7876-4fc2-918a-30d24d0548a0"
+        }
+    ]
+}

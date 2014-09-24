@@ -1,0 +1,57 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "intro",
+        "designer|userClassName": "Intro"
+    },
+    "designerId": "5c1335f1-6dd8-4bc8-b1cb-cc0149cd3693",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Existing User"
+            },
+            "name": "loginform",
+            "designerId": "6f5822f3-782a-499d-9d97-9103c1ea2464",
+            "masterInstanceId": "73946b36-47e1-4a22-93f7-278634535e0e"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "New Company"
+            },
+            "name": "companyform",
+            "designerId": "3343b37f-8aaa-403d-95fa-ebce81e9dd63",
+            "masterInstanceId": "7bdad51f-350b-4495-bbc9-16946c3f3d31"
+        },
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top"
+            },
+            "name": "MyTabBar",
+            "designerId": "1a6368a6-f0d2-4993-9c74-3eb465982b30"
+        }
+    ]
+}

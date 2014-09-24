@@ -1,0 +1,80 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "itemId": "mynavigationview"
+    },
+    "designerId": "d268cb6a-1f7f-40bd-94cf-0ddfefa13d31",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Your tickets"
+            },
+            "name": "ticketlist",
+            "designerId": "eea4dfc7-d225-4127-9f2e-c07104015572",
+            "masterInstanceId": "5230ae0f-1b45-423a-ab4d-7796afb4d6a7"
+        },
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top"
+            },
+            "name": "MyNavigationBar",
+            "designerId": "62fc802b-493c-41a8-a30f-ff0dab2d82fe",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "iconCls": "fa-bars",
+                        "itemId": "mybutton6",
+                        "text": null
+                    },
+                    "name": "MyButton6",
+                    "designerId": "5d87e4b4-7698-4610-9ddb-ea1f68d16e7f",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMybutton6Tap",
+                                "implHandler": [
+                                    "Ext.Viewport.toggleMenu('right');"
+                                ],
+                                "name": "tap"
+                            },
+                            "name": "onMybutton6Tap",
+                            "designerId": "a4e6e8fc-452b-4f9e-b464-9a5360cee9b1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

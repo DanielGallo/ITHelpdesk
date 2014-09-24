@@ -1,0 +1,69 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Login"
+    },
+    "name": "MyModel",
+    "designerId": "d024c3c8-5658-4290-9244-2faca4709211",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "EmailAddress"
+            },
+            "name": "field11",
+            "designerId": "cc1cd02b-6bc9-491d-a3cd-ac2a118abac5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Password"
+            },
+            "name": "field12",
+            "designerId": "24826976-7b79-4304-8c25-5d135c80dbcb"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "EmailAddress",
+                "field": "EmailAddress"
+            },
+            "name": "MyPresenceValidation",
+            "designerId": "f78a4cf4-9f46-462a-b4e6-eed9b80d18cf"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Password",
+                "field": "Password"
+            },
+            "name": "MyPresenceValidation1",
+            "designerId": "ae4542c8-625a-4b78-988f-4f8d8d4da477"
+        }
+    ]
+}

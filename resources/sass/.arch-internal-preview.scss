@@ -1,0 +1,20 @@
+/* _arch-vars-start */
+
+
+@import 'sencha-touch/cupertino';
+@import 'sencha-touch/cupertino/all';
+
+
+/* _arch-other-start */
+@include icon-font('fontawesome',
+    inline-font-files('fontawesome/fonts/fontawesome-webfont.woff', woff,
+                    'fontawesome/fonts/fontawesome-webfont.ttf', truetype,
+                    'fontawesome/fonts/fontawesome-webfont.svg', svg));
+
+@import 'stylesheets/fonts/fontawesome/scss/font-awesome.scss';
+
+.listDates {
+    font-size: 75%; 
+    color: #999; 
+    margin-top: 0.5em;
+}
